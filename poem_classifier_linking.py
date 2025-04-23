@@ -16,10 +16,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 class PoemRequest(BaseModel):
     poem: str
-
 @app.get("/")
 def doit():
     return {"hello" : "hello"}
@@ -28,3 +26,5 @@ def doit():
 def predict(request: PoemRequest):
     genre = predict_genre(request.poem)
     return {"genre": genre}
+
+# backend api created code
