@@ -8,8 +8,8 @@ import numpy as np
 from sklearn.preprocessing import LabelEncoder
 
 # Load the datasets
-train_data = pd.read_csv('./cleaned_poem_classification_train_data.csv')
-test_data = pd.read_csv('./poem_classification-test_data.csv')
+train_data = pd.read_csv('./balanced_poem_train_data.csv', quotechar='"')
+test_data = pd.read_csv('./poem_test_data.csv', quotechar='"')
 
 # Data Cleaning
 train_data['Genre'] = train_data['Genre'].str.strip()
