@@ -97,3 +97,5 @@ def predict_genre(poem):
     poem_embedding = outputs.last_hidden_state.mean(dim=1).numpy().reshape(1, -1)
     genre_prediction = model.predict(poem_embedding)
     return le.inverse_transform(genre_prediction)[0]
+
+# code updated "used stratifiedfold"
